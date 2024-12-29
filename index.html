@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Project Embed</title>
+
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen styling for iframe */
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Alert for small screens */
+        .alert {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            .alert {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(255, 0, 0, 0.9);
+                color: white;
+                z-index: 10;
+                text-align: center;
+                padding: 1rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            iframe {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Alert message for small screens -->
+    <div class="alert">
+        Please open this page on a desktop device for the best experience.
+    </div>
+
+    <!-- Figma Embed -->
+    <iframe 
+        src="https://embed.figma.com/design/jyPwteeGwr5PfVNcQK2qJx/Untitled?node-id=1-4&embed-host=share" 
+        allowfullscreen>
+    </iframe>
+</body>
+
+</html>
