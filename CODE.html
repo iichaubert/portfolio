@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolioi</title>
+    <title>Figma Prototype Embed</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+
+        .alert {
+            display: none;
+        }
+
+        @media (max-width: 992px) {
+            .alert {
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(255, 0, 0, 0.9);
+                color: #FFF;
+                z-index: 100;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                letter-spacing: 0.03em;
+                padding: 2rem;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            iframe {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Portfolio</h1>
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/jyPwteeGwr5PfVNcQK2qJx/Untitled?node-id=1-4&embed-host=share" allowfullscreen></iframe>
+    <div class="alert">
+        Please open me on a desktop :)
+    </div>
+
+    <iframe 
+        src="https://embed.figma.com/design/jyPwteeGwr5PfVNcQK2qJx/Untitled?node-id=1-4&embed-host=share" 
+        allowfullscreen>
+    </iframe>
 </body>
+
 </html>
